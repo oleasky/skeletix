@@ -10,7 +10,7 @@ const StatCard = ({ statData = {
     line1: '',
     line2: ''
 }, statDescriptor, statSource, statImage, className = '' }) => {
-    return (react_1.default.createElement("article", { className: `statistic-card flex-1 flex flex-col text-center py-fluid-xl px-fluid-xl ${className}` },
+    return (react_1.default.createElement("article", { className: `statistic-card flex-1 flex flex-col text-center py-fluid-xl px-fluid-xl bg-slate-50 ${className}` },
         statImage && (react_1.default.createElement("figure", null,
             react_1.default.createElement(image_1.default, { src: statImage.src, alt: statImage.alt, fill: true, sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" }))),
         react_1.default.createElement("div", { className: "stat-content z-10" },
