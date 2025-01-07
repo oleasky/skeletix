@@ -7,10 +7,11 @@ interface ImageCardProps{
     image?: string | StaticImageData,
     altText: string,
     title?: string,
-    content?: string
+    content?: string,
+    children?: React.ReactNode
 }
 
-export const ImageCard = ({image, altText, title, content}:ImageCardProps) => {
+export const ImageCard = ({image, altText, title, content, children}:ImageCardProps) => {
   return (
     <Container htmlTag="article" className="content-card md:flex-row bg-slate-100 rounded-md" layout='row'>
         {image && (
@@ -26,6 +27,7 @@ export const ImageCard = ({image, altText, title, content}:ImageCardProps) => {
         <Container htmlTag="div" className='flex-1 py-fluid-xl px-fluid-lg'>
             <h3>{title}</h3>
             <p>{content}</p>
+            {children}
         </Container>
     </Container>
   )
