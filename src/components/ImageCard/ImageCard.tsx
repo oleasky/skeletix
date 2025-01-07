@@ -12,7 +12,7 @@ interface ImageCardProps{
 
 export const ImageCard = ({image, altText, title, content}:ImageCardProps) => {
   return (
-    <Container htmlTag="article" className="content-card md:flex-row" layout='row'>
+    <Container htmlTag="article" className="content-card md:flex-row bg-slate-100 rounded-md" layout='row'>
         {image && (
           <figure className='flex-0 relative md:w-3/5'>
             <Image

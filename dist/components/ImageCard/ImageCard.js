@@ -8,7 +8,7 @@ const react_1 = __importDefault(require("react"));
 const Container_1 = require("../Container");
 const image_1 = __importDefault(require("next/image"));
 const ImageCard = ({ image, altText, title, content }) => {
-    return (react_1.default.createElement(Container_1.Container, { htmlTag: "article", className: "content-card md:flex-row", layout: 'row' },
+    return (react_1.default.createElement(Container_1.Container, { htmlTag: "article", className: "content-card md:flex-row bg-slate-100 rounded-md", layout: 'row' },
         image && (react_1.default.createElement("figure", { className: 'flex-0 relative md:w-3/5' },
             react_1.default.createElement(image_1.default, { src: typeof image === 'string' ? image : image.src, alt: altText, width: 800, height: 800 }))),
         react_1.default.createElement(Container_1.Container, { htmlTag: "div", className: 'flex-1 py-fluid-xl px-fluid-lg' },

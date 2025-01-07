@@ -27,7 +27,7 @@ export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt }: Bloc
                     />
                 </figure>
             )}
-            <div className='lg:absolute z-10 top-0 left-0 w-full h-full'>
+            <div className='z-10 top-0 left-0 w-full h-full'>
                 <div className='blockquote-content'>
                     <p dangerouslySetInnerHTML={{ __html: quote }} />
                 </div>
