@@ -17,11 +17,11 @@
     "wireframing",
     "boilerplate"
   ],
-  "author": "Your Name <your.email@example.com>",
+  "author": "Oleasky",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "next": "^13.4.0",
     "barestyles": "^0.0.141"
   },
