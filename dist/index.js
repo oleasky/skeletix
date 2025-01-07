@@ -18,4 +18,4 @@ __exportStar(require("./components/Container"), exports);
 __exportStar(require("./components/Button"), exports);
 __exportStar(require("./components/StatCard"), exports);
 __exportStar(require("./components/BlockQuote"), exports);
-// export * from './components/ImageCard'
+__exportStar(require("./components/ImageCard"), exports);
