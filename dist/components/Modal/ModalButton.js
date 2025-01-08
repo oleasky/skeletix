@@ -8,6 +8,7 @@ exports.ModalButton = void 0;
 const react_1 = __importDefault(require("react"));
 const react_dom_1 = __importDefault(require("react-dom"));
 const useModal_1 = require("../../hooks/useModal");
+const compId = "modal-button";
 const ModalButton = ({ content, children, className }) => {
     const { isOpen, modalContent, handleOpenModal, handleCloseModal } = (0, useModal_1.useModal)();
     const openCustomModal = () => {
@@ -18,11 +19,11 @@ const ModalButton = ({ content, children, className }) => {
             modalContent,
             react_1.default.createElement("button", { className: "block p-4 bg-slate-900 text-white absolute top-0 -translate-y-full right-0 close-modal", type: "button", onClick: handleCloseModal }, "Close")))) : null;
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("div", { className: `modal-trigger ${className}` },
-            react_1.default.createElement("a", { href: "#", onClick: (e) => {
+        react_1.default.createElement("div", { className: `modal-trigger ${compId}` },
+            react_1.default.createElement("button", { onClick: (e) => {
                     e.preventDefault();
                     openCustomModal();
-                } }, children)),
+                }, className: `${compId}__btn ${className}` }, children)),
         isOpen && react_dom_1.default.createPortal(modalElement, document.body)));
 };
 exports.ModalButton = ModalButton;

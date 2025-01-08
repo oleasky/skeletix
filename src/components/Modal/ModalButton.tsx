@@ -9,6 +9,8 @@ interface ModalButtonProps {
     className?: string; // Optional class for styling
 }
 
+const compId = "modal-button";
+
 export const ModalButton = ({ content, children, className }: ModalButtonProps) => {
     const { isOpen, modalContent, handleOpenModal, handleCloseModal } = useModal();
 
@@ -30,16 +32,16 @@ export const ModalButton = ({ content, children, className }: ModalButtonProps) 
 
     return (
         <>
-            <div className={`modal-trigger ${className}`}>
-                <a
-                    href="#"
+            <div className={`modal-trigger ${compId}`}>
+                <button
                     onClick={(e) => {
                         e.preventDefault();
                         openCustomModal(); 
                     }}
+                    className={`${compId}__btn ${className}`}
                 >
                     {children}
-                </a>
+                </button>
             </div>
 
             {isOpen && ReactDOM.createPortal(modalElement, document.body)}
