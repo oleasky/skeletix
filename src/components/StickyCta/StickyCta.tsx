@@ -1,4 +1,4 @@
-// "use client"; // Marks this component as a client component
+"use client"; 
 
 import React from 'react';
 // import { ModalButton } from './ModalButton';
