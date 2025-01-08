@@ -34,7 +34,9 @@ const PageFooter = ({ name, phone, address, branding, helpContent, privacyConten
             (helpContent || privacyContent) &&
                 react_1.default.createElement(Container_1.Container, { className: `basis-1/5 text-fluid-xs max-md:items-center ${compId}__help-privacy` },
                     react_1.default.createElement("div", { className: 'flex gap-4 uppercase' },
-                        react_1.default.createElement(Modal_1.ModalButton, { content: helpContent }, "Help"),
-                        react_1.default.createElement(Modal_1.ModalButton, { content: privacyContent }, "Privacy"))))));
+                        helpContent &&
+                            react_1.default.createElement(Modal_1.ModalButton, { content: helpContent }, "Help"),
+                        privacyContent &&
+                            react_1.default.createElement(Modal_1.ModalButton, { content: privacyContent }, "Privacy"))))));
 };
 exports.PageFooter = PageFooter;
