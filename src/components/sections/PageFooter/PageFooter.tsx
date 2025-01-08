@@ -2,10 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import { Container} from '../../Container'
 import { ModalButton } from '../../Modal';
-// import data from "@/data/globalData.json";
-// import HelpModal from '../components/HelpModal';
-// import PrivacyModal from '../components/PrivacyModal';
-
 
 interface FooterProps {
     name?: string;
@@ -39,7 +35,7 @@ export const PageFooter = ({
     return (
         <Container
             htmlTag='footer'
-            className={`page-footer bg-slate-900 text-white p-fluid-sm z-10 ${compId} ${className}`}
+            className={`bg-slate-400 p-fluid-sm z-10 ${compId} ${className}`}
         >
             <Container
                 alignItems='items-center'
@@ -67,13 +63,12 @@ export const PageFooter = ({
                         }
                     </Container>
                 }
-                {helpContent || privacyContent &&
+                {(helpContent || privacyContent) &&
                     <Container className={`basis-1/5 text-fluid-xs max-md:items-center ${compId}__help-privacy`}>
                         <div className='flex gap-4 uppercase'>
                             <ModalButton content={helpContent} >
                                 Help
                             </ModalButton>
-                            |
                             <ModalButton content={privacyContent} >
                                 Privacy
                             </ModalButton>

@@ -10,7 +10,7 @@ const Container_1 = require("../../Container");
 const Modal_1 = require("../../Modal");
 const compId = 'page-footer';
 const PageFooter = ({ name, phone, address, branding, helpContent, privacyContent, className = '' }) => {
-    return (react_1.default.createElement(Container_1.Container, { htmlTag: 'footer', className: `page-footer bg-slate-900 text-white p-fluid-sm z-10 ${compId} ${className}` },
+    return (react_1.default.createElement(Container_1.Container, { htmlTag: 'footer', className: `bg-slate-400 p-fluid-sm z-10 ${compId} ${className}` },
         react_1.default.createElement(Container_1.Container, { alignItems: 'items-center', justifyContent: 'justify-between', className: 'gap-4', layout: 'row' },
             "   ",
             branding &&
@@ -31,11 +31,10 @@ const PageFooter = ({ name, phone, address, branding, helpContent, privacyConten
                                 "\u00A0\u00A0"),
                             phone &&
                                 react_1.default.createElement("a", { href: `tel:${phone}` }, phone))),
-            helpContent || privacyContent &&
+            (helpContent || privacyContent) &&
                 react_1.default.createElement(Container_1.Container, { className: `basis-1/5 text-fluid-xs max-md:items-center ${compId}__help-privacy` },
                     react_1.default.createElement("div", { className: 'flex gap-4 uppercase' },
                         react_1.default.createElement(Modal_1.ModalButton, { content: helpContent }, "Help"),
-                        "|",
                         react_1.default.createElement(Modal_1.ModalButton, { content: privacyContent }, "Privacy"))))));
 };
 exports.PageFooter = PageFooter;
