@@ -32,13 +32,13 @@ export const ModalButton = ({ content, children, className }: ModalButtonProps) 
 
     return (
         <>
-            <div className={`modal-trigger ${compId}`}>
+            <div className={`modal-trigger ${className} ${compId}`}>
                 <button
                     onClick={(e) => {
                         e.preventDefault();
                         openCustomModal(); 
                     }}
-                    className={`${compId}__btn ${className}`}
+                    className={`hover:scale-110 transition-all ease-in m-24 block bg-slate-700 text-white w-fit p-4 ${compId}__btn`}
                 >
                     {children}
                 </button>

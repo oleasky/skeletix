@@ -19,11 +19,11 @@ const ModalButton = ({ content, children, className }) => {
             modalContent,
             react_1.default.createElement("button", { className: "block p-4 bg-slate-900 text-white absolute top-0 -translate-y-full right-0 close-modal", type: "button", onClick: handleCloseModal }, "Close")))) : null;
     return (react_1.default.createElement(react_1.default.Fragment, null,
-        react_1.default.createElement("div", { className: `modal-trigger ${compId}` },
+        react_1.default.createElement("div", { className: `modal-trigger ${className} ${compId}` },
             react_1.default.createElement("button", { onClick: (e) => {
                     e.preventDefault();
                     openCustomModal();
-                }, className: `${compId}__btn ${className}` }, children)),
+                }, className: `hover:scale-110 transition-all ease-in m-24 block bg-slate-700 text-white w-fit p-4 ${compId}__btn` }, children)),
         isOpen && react_dom_1.default.createPortal(modalElement, document.body)));
 };
 exports.ModalButton = ModalButton;
