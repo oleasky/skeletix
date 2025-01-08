@@ -22,7 +22,7 @@ const StickyCta = ({ formId, offset = 120, children }) => {
             });
         }
     };
-    return (react_1.default.createElement(Container_1.Container, { htmlTag: "div", className: `flex bg-slate-800 sticky bottom-0 p-4" alignItems="items-center ${compId}` },
+    return (react_1.default.createElement(Container_1.Container, { htmlTag: "div", className: `flex bg-slate-800 sticky bottom-0 p-4 ${compId}`, alignItems: "items-center" },
         react_1.default.createElement("div", { className: `flex flex-col items-center justify-center ${compId}__content` },
             react_1.default.createElement("button", { onClick: scrollToForm, className: 'text-white' }, children))));
 };
