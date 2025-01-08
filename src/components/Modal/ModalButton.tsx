@@ -19,7 +19,7 @@ export const ModalButton = ({ content, children, className }: ModalButtonProps) 
 
     const modalElement = isOpen ? (
         <div className="modal-container modal__wrapper fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 z-50 flex justify-center items-center">
-            <div className="modal-content ">
+            <div className="modal-content relative">
                 {modalContent}
                 <button className="block p-4 bg-yellow-500 absolute -top-4 right-0 close-modal" type="button" onClick={handleCloseModal}>
                     Close
