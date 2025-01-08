@@ -16,7 +16,7 @@ const ModalButton = ({ content, children, className }) => {
     const modalElement = isOpen ? (react_1.default.createElement("div", { className: "modal-container modal__wrapper fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 z-50 flex justify-center items-center" },
         react_1.default.createElement("div", { className: "modal-content relative" },
             modalContent,
-            react_1.default.createElement("button", { className: "block p-4 bg-yellow-500 absolute -top-4 right-0 close-modal", type: "button", onClick: handleCloseModal }, "Close")))) : null;
+            react_1.default.createElement("button", { className: "block p-4 bg-slate-900 text-white absolute top-0 -translate-y-full right-0 close-modal", type: "button", onClick: handleCloseModal }, "Close")))) : null;
     return (react_1.default.createElement(react_1.default.Fragment, null,
         react_1.default.createElement("div", { className: `modal-trigger ${className}` },
             react_1.default.createElement("a", { href: "#", onClick: (e) => {
