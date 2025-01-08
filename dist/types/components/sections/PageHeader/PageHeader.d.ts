@@ -1,6 +1,6 @@
 import React from 'react';
 interface HeaderProps {
-    classname?: string;
+    className?: string;
     logoUrl?: string;
     logoAlt?: string;
     children?: React.ReactNode;

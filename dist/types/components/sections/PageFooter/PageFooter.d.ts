@@ -14,7 +14,7 @@ interface FooterProps {
     };
     helpContent?: React.ReactNode;
     privacyContent?: React.ReactNode;
-    classname?: string;
+    className?: string;
 }
-export declare const PageFooter: ({ name, phone, address, branding, helpContent, privacyContent, classname }: FooterProps) => React.JSX.Element;
+export declare const PageFooter: ({ name, phone, address, branding, helpContent, privacyContent, className }: FooterProps) => React.JSX.Element;
 export {};
