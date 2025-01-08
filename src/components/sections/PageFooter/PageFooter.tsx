@@ -1,0 +1,100 @@
+import React from 'react'
+import Image from 'next/image'
+import { Container} from '../../Container'
+import { ModalButton } from '../../Modal';
+// import data from "@/data/globalData.json";
+// import HelpModal from '../components/HelpModal';
+// import PrivacyModal from '../components/PrivacyModal';
+
+
+interface FooterProps {
+    name?: string;
+    phone?: string;
+    address?: {
+        street: string;
+        city: string;
+        state: string;
+        zip: string;
+    };
+    branding?: {
+        logoFooter: string;
+        logoAlt: string;
+    };
+    helpContent?: React.ReactNode;
+    privacyContent?: React.ReactNode;
+    classname?: string;
+}
+
+const compId = 'page-footer';
+
+export const PageFooter = ({
+    name, 
+    phone, 
+    address,
+    branding, 
+    helpContent, 
+    privacyContent,
+    classname
+}:FooterProps) => {
+    // const {
+    //     name,
+    //     phone,
+    //     address: {
+    //         street,
+    //         city,
+    //         state,
+    //         zip
+    //     },
+    //     branding: {
+    //         logoFooter,
+    //         logoAlt
+    //     }
+    // } = data.partner;
+
+    return (
+        <Container
+            htmlTag='footer'
+            className={`page-footer bg-primary-cardinal-500 text-white p-fluid-sm z-10 ${compId} ${classname}`}
+        >
+            <Container
+                alignItems='items-center'
+                justifyContent='justify-between'
+                className='gap-4'
+                layout='row'
+            >
+                <Container layout='row' className='school-info flex gap-4 items-center basis-4/5'>
+                    {branding &&
+                        <figure className={`relative w-fluid-xl h-fluid-md ${compId}__logo`}>
+                            <Image
+                                src={branding.logoFooter}
+                                alt={branding.logoAlt}
+                                fill
+                            />
+                        </figure>
+                    }
+                    {address &&
+                        <div className={`flex w-full ${compId}__contact-info`}>
+                            <address>{address.street}, {address.city}, {address.state} {address.zip}&nbsp;&nbsp;</address>
+                            {phone &&
+                                <a href={`tel:${phone}`}>{phone}</a>
+                            }
+                        </div>
+                    }
+                </Container>
+                {helpContent || privacyContent &&
+                    <Container className={`basis-1/5 text-fluid-xs max-md:items-center ${compId}__help-privacy`}>
+                        <div className='flex gap-4 uppercase'>
+                            <ModalButton content={helpContent} >
+                                Help
+                            </ModalButton>
+                            |
+                            <ModalButton content={privacyContent} >
+                                Privacy
+                            </ModalButton>
+                        </div>
+                    </Container>
+                }
+            </Container>
+        </Container>
+    )
+}

@@ -1,0 +1,53 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PageFooter = void 0;
+const react_1 = __importDefault(require("react"));
+const image_1 = __importDefault(require("next/image"));
+const Container_1 = require("../../Container");
+const Modal_1 = require("../../Modal");
+const compId = 'page-footer';
+const PageFooter = ({ name, phone, address, branding, helpContent, privacyContent, classname }) => {
+    // const {
+    //     name,
+    //     phone,
+    //     address: {
+    //         street,
+    //         city,
+    //         state,
+    //         zip
+    //     },
+    //     branding: {
+    //         logoFooter,
+    //         logoAlt
+    //     }
+    // } = data.partner;
+    return (react_1.default.createElement(Container_1.Container, { htmlTag: 'footer', className: `page-footer bg-primary-cardinal-500 text-white p-fluid-sm z-10 ${compId} ${classname}` },
+        react_1.default.createElement(Container_1.Container, { alignItems: 'items-center', justifyContent: 'justify-between', className: 'gap-4', layout: 'row' },
+            react_1.default.createElement(Container_1.Container, { layout: 'row', className: 'school-info flex gap-4 items-center basis-4/5' },
+                branding &&
+                    react_1.default.createElement("figure", { className: `relative w-fluid-xl h-fluid-md ${compId}__logo` },
+                        react_1.default.createElement(image_1.default, { src: branding.logoFooter, alt: branding.logoAlt, fill: true })),
+                address &&
+                    react_1.default.createElement("div", { className: `flex w-full ${compId}__contact-info` },
+                        react_1.default.createElement("address", null,
+                            address.street,
+                            ", ",
+                            address.city,
+                            ", ",
+                            address.state,
+                            " ",
+                            address.zip,
+                            "\u00A0\u00A0"),
+                        phone &&
+                            react_1.default.createElement("a", { href: `tel:${phone}` }, phone))),
+            helpContent || privacyContent &&
+                react_1.default.createElement(Container_1.Container, { className: `basis-1/5 text-fluid-xs max-md:items-center ${compId}__help-privacy` },
+                    react_1.default.createElement("div", { className: 'flex gap-4 uppercase' },
+                        react_1.default.createElement(Modal_1.ModalButton, { content: helpContent }, "Help"),
+                        "|",
+                        react_1.default.createElement(Modal_1.ModalButton, { content: privacyContent }, "Privacy"))))));
+};
+exports.PageFooter = PageFooter;

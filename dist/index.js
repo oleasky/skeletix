@@ -21,4 +21,5 @@ __exportStar(require("./components/BlockQuote"), exports);
 __exportStar(require("./components/ImageCard"), exports);
 __exportStar(require("./components/Modal"), exports);
 __exportStar(require("./components/StickyCta"), exports);
-__exportStar(require("./components/PageHeader"), exports);
+__exportStar(require("./components/sections/PageHeader"), exports);
+__exportStar(require("./components/sections/PageFooter"), exports);

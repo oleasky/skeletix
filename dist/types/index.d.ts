@@ -5,4 +5,5 @@ export * from './components/BlockQuote';
 export * from './components/ImageCard';
 export * from './components/Modal';
 export * from './components/StickyCta';
-export * from './components/PageHeader';
+export * from './components/sections/PageHeader';
+export * from './components/sections/PageFooter';
