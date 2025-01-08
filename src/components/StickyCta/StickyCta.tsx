@@ -28,7 +28,7 @@ export const StickyCta = ({ formId, offset = 120, children }:StickyCtaProps) => 
     return (
         <Container htmlTag="div" className="sticky-cta block bg-primary-black sticky bottom-0 p-fluid-xs" alignItems="items-center">
             <div className='wrapper centered'>
-            <button onClick={scrollToForm}>
+            <button onClick={scrollToForm} className='text-white'>
             {children}
             </button>
             </div>
