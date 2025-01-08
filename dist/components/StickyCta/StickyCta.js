@@ -1,5 +1,5 @@
 "use strict";
-"use client"; // Marks this component as a client component
+// "use client"; // Marks this component as a client component
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
@@ -22,8 +22,8 @@ const StickyCta = ({ formId, offset = 120, children }) => {
             });
         }
     };
-    return (react_1.default.createElement(Container_1.Container, { htmlTag: "div", className: `flex bg-slate-800 sticky bottom-0 p-fluid-xs" alignItems="items-center ${compId}` },
-        react_1.default.createElement("div", { className: `flex flex-col items-center justify-center p-fluid-lg ${compId}__content` },
+    return (react_1.default.createElement(Container_1.Container, { htmlTag: "div", className: `flex bg-slate-800 sticky bottom-0 p-4" alignItems="items-center ${compId}` },
+        react_1.default.createElement("div", { className: `flex flex-col items-center justify-center ${compId}__content` },
             react_1.default.createElement("button", { onClick: scrollToForm, className: 'text-white' }, children))));
 };
 exports.StickyCta = StickyCta;

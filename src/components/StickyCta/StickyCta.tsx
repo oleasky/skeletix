@@ -1,4 +1,4 @@
-"use client"; // Marks this component as a client component
+// "use client"; // Marks this component as a client component
 
 import React from 'react';
 // import { ModalButton } from './ModalButton';
@@ -27,8 +27,8 @@ export const StickyCta = ({ formId, offset = 120, children }:StickyCtaProps) => 
         }
     };
     return (
-        <Container htmlTag="div" className={`flex bg-slate-800 sticky bottom-0 p-fluid-xs" alignItems="items-center ${compId}`}>
-            <div className={`flex flex-col items-center justify-center p-fluid-lg ${compId}__content`}>
+        <Container htmlTag="div" className={`flex bg-slate-800 sticky bottom-0 p-4" alignItems="items-center ${compId}`}>
+            <div className={`flex flex-col items-center justify-center ${compId}__content`}>
                 <button onClick={scrollToForm} className='text-white'>
                     {children}
                 </button>
