@@ -15,6 +15,8 @@ interface StatCardData {
     className?: string;
 }
 
+const compId = 'statistic-card'
+
 export const StatCard = ({
     statData = {
         line1: '',
@@ -26,9 +28,9 @@ export const StatCard = ({
     className = ''
 }: StatCardData) => {
     return (
-        <article className={`statistic-card flex-1 flex flex-col text-center py-fluid-xl px-fluid-xl bg-slate-50 ${className}`}>
+        <article className={`flex-1 flex flex-col text-center py-fluid-xl px-fluid-xl bg-slate-50 ${compId} ${className}`}>
             {statImage && (
-                <figure>
+                <figure className={`relative ${compId}__image`}>
                     <Image
                         src={statImage.src}
                         alt={statImage.alt}
@@ -37,12 +39,12 @@ export const StatCard = ({
                     />
                 </figure>
             )}
-            <div className="stat-content z-10">
+            <div className={`z-10 ${compId}__content`}>
                 <h2 className='text-fluid-xl'>
                     {statData?.line1} <span className='block text-[1.7em]'>{statData?.line2}</span>
                 </h2>
-                <p className='font-h2'>{statDescriptor}</p>
-                <small>{statSource}</small>
+                {statDescriptor && <p className='font-h2'>{statDescriptor}</p>}
+                {statSource && <small>{statSource}</small>}
             </div>
         </article>
     )

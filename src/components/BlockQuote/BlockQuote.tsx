@@ -11,11 +11,14 @@ interface BlockquoteData {
         src: string,
     }
     imageAlt?: string
+    className?: string
 }
 
-export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt }: BlockquoteData) => {
+const compId = 'blockquote'
+
+export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, className }: BlockquoteData) => {
     return (
-        <blockquote className='testimonial-card relative w-full mx-auto'>
+        <blockquote className={`testimonial-card relative w-full mx-auto ${compId} ${className}`}>
             {image && (
                 <figure className='relative w-[15rem] h-[18rem] mx-auto lg:w-full lg:h-full z-0'>
                     <Image
@@ -28,7 +31,7 @@ export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt }: Bloc
                 </figure>
             )}
             <div className='z-10 top-0 left-0 w-full h-full'>
-                <div className='blockquote-content'>
+                <div className={`${compId}__content`}>
                     <p dangerouslySetInnerHTML={{ __html: quote }} />
                 </div>
                 <Container 
