@@ -10,7 +10,7 @@ const compId = 'modal';
 
 export const ModalWindow = ({className='', children}:ModalWindowProps) => {
   return (
-    <Container id="modal" className={`bg-red-500 ${compId}__window ${className}`}>
+    <Container id="modal" className={`bg-white p-fluid-sm rounded-lg shadow-lg ${compId}__window ${className}`}>
         {children}
     </Container>
   )
