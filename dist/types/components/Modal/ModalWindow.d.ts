@@ -1,7 +1,9 @@
-import React from 'react';
-interface ModalWindowProps {
+import React from "react";
+interface ModalElementProps {
+    isOpen: boolean;
+    modalContent: React.ReactNode;
+    handleCloseModal: () => void;
     className?: string;
-    children: React.ReactNode;
 }
-export declare const ModalWindow: ({ className, children }: ModalWindowProps) => React.JSX.Element;
+export declare const ModalWindow: ({ isOpen, modalContent, handleCloseModal, className }: ModalElementProps) => React.JSX.Element | null;
 export {};

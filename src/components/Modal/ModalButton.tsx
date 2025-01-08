@@ -2,6 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { useModal } from "../../hooks/useModal";
+import { ModalWindow } from "./ModalWindow";
 
 interface ModalButtonProps {
     content: React.ReactNode; // The modal content to display
@@ -19,17 +20,6 @@ export const ModalButton = ({ content, children, className }: ModalButtonProps) 
         handleOpenModal(content);
     };
 
-    const modalElement = isOpen ? (
-        <div className="modal-container modal__wrapper fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 z-50 flex justify-center items-center">
-            <div className="modal-content relative">
-                {modalContent}
-                <button className="block p-4 bg-slate-900 text-white absolute top-0 -translate-y-full right-0 close-modal" type="button" onClick={handleCloseModal}>
-                    Close
-                </button>
-            </div>
-        </div>
-    ) : null;
-
     return (
         <>
             <div className={`modal-trigger ${className} ${compId}`}>
@@ -44,7 +34,27 @@ export const ModalButton = ({ content, children, className }: ModalButtonProps) 
                 </button>
             </div>
 
-            {isOpen && ReactDOM.createPortal(modalElement, document.body)}
+            {isOpen && ReactDOM.createPortal(
+                <ModalWindow 
+                    isOpen={isOpen} 
+                    modalContent={modalContent} 
+                    handleCloseModal={handleCloseModal} 
+                    className={`${compId}__content`} 
+                />, 
+                document.body
+            )}
         </>
     );
 };
+
+
+// const modalElement = isOpen ? (
+//     <div className="modal-container modal__wrapper fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 z-50 flex justify-center items-center">
+//         <div className="modal-content relative">
+//             {modalContent}
+//             <button className="block p-4 bg-slate-900 text-white absolute top-0 -translate-y-full right-0 close-modal" type="button" onClick={handleCloseModal}>
+//                 Close
+//             </button>
+//         </div>
+//     </div>
+// ) : null;

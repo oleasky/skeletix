@@ -1,17 +1,28 @@
-import React from 'react'
-import { Container } from '../Container'
+// components/Modal/ModalElement.tsx
+import React from "react";
 
-interface ModalWindowProps {
+interface ModalElementProps {
+    isOpen: boolean;
+    modalContent: React.ReactNode;
+    handleCloseModal: () => void;
     className?: string;
-    children: React.ReactNode;
 }
 
-const compId = 'modal';
+export const ModalWindow = ({ isOpen, modalContent, handleCloseModal, className='' }: ModalElementProps) => {
+    if (!isOpen) return null;
 
-export const ModalWindow = ({className='', children}:ModalWindowProps) => {
-  return (
-    <Container id="modal" className={`bg-white p-fluid-sm rounded-lg shadow-lg ${compId}__window ${className}`}>
-        {children}
-    </Container>
-  )
-}
+    return (
+        <div className={`modal-container modal__wrapper fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 z-50 flex justify-center items-center ${className}`}>
+            <div className="modal-content relative">
+                {modalContent}
+                <button
+                    className="block p-4 bg-slate-900 text-white absolute top-0 -translate-y-full right-0 close-modal"
+                    type="button"
+                    onClick={handleCloseModal}
+                >
+                    Close
+                </button>
+            </div>
+        </div>
+    );
+};

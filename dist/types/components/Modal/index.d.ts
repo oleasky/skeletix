@@ -1,2 +1,2 @@
 export { ModalButton } from "./ModalButton";
-export { ModalWindow } from "./ModalWindow";
+export { ModalContent } from "./ModalContent";
