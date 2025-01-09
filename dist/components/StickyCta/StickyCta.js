@@ -9,6 +9,7 @@ const react_1 = __importDefault(require("react"));
 // import { ModalButton } from './ModalButton';
 // import { FormModal } from './FormModal';
 const Container_1 = require("../Container");
+const Button_1 = require("../Button");
 const compId = 'sticky-cta';
 const StickyCta = ({ formId, offset = 120, children }) => {
     const scrollToForm = () => {
@@ -24,6 +25,6 @@ const StickyCta = ({ formId, offset = 120, children }) => {
     };
     return (react_1.default.createElement(Container_1.Container, { htmlTag: "div", className: `flex bg-[#334155] sticky bottom-0 p-fluid-sm ${compId}`, alignItems: "items-center" },
         react_1.default.createElement("div", { className: `flex flex-col items-center justify-center ${compId}__content` },
-            react_1.default.createElement("button", { onClick: scrollToForm, className: 'text-[#FFFFFF]' }, children))));
+            react_1.default.createElement(Button_1.Button, { type: 'button', onClick: scrollToForm, className: 'text-[#FFFFFF]' }, children))));
 };
 exports.StickyCta = StickyCta;

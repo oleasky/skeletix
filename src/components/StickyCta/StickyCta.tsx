@@ -4,6 +4,7 @@ import React from 'react';
 // import { ModalButton } from './ModalButton';
 // import { FormModal } from './FormModal';
 import { Container } from '../Container';
+import { Button } from '../Button';
 
 interface StickyCtaProps {
     formId: string;
@@ -33,9 +34,9 @@ export const StickyCta = ({ formId, offset = 120, children }:StickyCtaProps) => 
             alignItems="items-center"
         >
             <div className={`flex flex-col items-center justify-center ${compId}__content`}>
-                <button onClick={scrollToForm} className='text-[#FFFFFF]'>
+                <Button type='button' onClick={scrollToForm} className='text-[#FFFFFF]'>
                     {children}
-                </button>
+                </Button>
             </div>
         </Container>
     );
