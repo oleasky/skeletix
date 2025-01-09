@@ -32,7 +32,7 @@ const PageFooter = ({ name, phone, address, branding, helpContent, privacyConten
                             phone &&
                                 react_1.default.createElement("a", { href: `tel:${phone}` }, phone))),
             (helpContent || privacyContent) &&
-                react_1.default.createElement(Container_1.Container, { className: `basis-1/5 text-fluid-xs max-md:items-center ${compId}__help-privacy` },
+                react_1.default.createElement(Container_1.Container, { className: `basis-1/5 text-sm max-md:items-center ${compId}__help-privacy` },
                     react_1.default.createElement("div", { className: 'flex gap-4 uppercase' },
                         helpContent &&
                             react_1.default.createElement(Modal_1.ModalButton, { content: helpContent }, "Help"),

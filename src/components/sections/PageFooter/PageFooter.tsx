@@ -64,7 +64,7 @@ export const PageFooter = ({
                     </Container>
                 }
                 {(helpContent || privacyContent) &&
-                    <Container className={`basis-1/5 text-fluid-xs max-md:items-center ${compId}__help-privacy`}>
+                    <Container className={`basis-1/5 text-sm max-md:items-center ${compId}__help-privacy`}>
                         <div className='flex gap-4 uppercase'>
                             {helpContent &&
                                 <ModalButton content={helpContent} >
