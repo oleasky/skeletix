@@ -28,7 +28,7 @@
     "url": "git+https://github.com/oleasky/skeletix.git"
   },
   "peerDependencies": {
-    "barestyles": "^0.0.141",
+    "barestyles": "^0.0.144",
     "next": "^15.1.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
