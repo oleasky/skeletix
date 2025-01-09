@@ -36,8 +36,6 @@ export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, classN
                 </div>
                 <Container 
                     layout='row'
-                    justifyContent='justify-center' 
-                    alignItems='items-center' 
                     className={`gap-3 text-lg ${compId}author`}>
                     <span>
                         <strong>{author},</strong>{authorTitle && <span> {authorTitle}</span>}
