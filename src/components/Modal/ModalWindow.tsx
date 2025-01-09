@@ -1,5 +1,6 @@
+'use client'
 // components/Modal/ModalElement.tsx
-import React from "react";
+import React, {useEffect} from "react";
 import { Button } from "../Button";
 
 interface ModalElementProps {
@@ -10,6 +11,23 @@ interface ModalElementProps {
 }
 
 export const ModalWindow = ({ isOpen, modalContent, handleCloseModal, className='' }: ModalElementProps) => {
+      // Hook to handle keydown event
+      useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                handleCloseModal(); // Close modal on "Esc" key press
+            }
+        };
+
+        if (isOpen) {
+            window.addEventListener("keydown", handleKeyDown);
+        }
+
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown); // Cleanup event listener
+        };
+    }, [isOpen, handleCloseModal]);
+
     if (!isOpen) return null;
 
     return (
