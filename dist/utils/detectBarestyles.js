@@ -9,7 +9,7 @@ function isBarestylesInstalled() {
     }
     catch (e) {
         if (!warned) {
-            console.warn('[barebones] TailwindCSS plugin "barestyles" is not installed. Some utility classes may not render as expected.');
+            console.warn('[Skeletix] TailwindCSS plugin "barestyles" is not installed. Some utility classes may not render as expected.');
             warned = true;
         }
         return false;

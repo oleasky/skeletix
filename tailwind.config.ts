@@ -4,7 +4,7 @@ import barestyles from "barestyles";
 const config: Config = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
-    './node_modules/barebones/**/*.{js,ts,jsx,tsx}',
+    './node_modules/skeletix/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {

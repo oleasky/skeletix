@@ -1,7 +1,7 @@
 {
-  "name": "bareui",
+  "name": "skeletix",
   "version": "0.0.6",
-  "description": "BareUI is wireframing design system for rapid prototyping and boilerplate React based projects.",
+  "description": "Skeletix is wireframing design system for rapid prototyping and boilerplate React based projects.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -12,7 +12,9 @@
     "build": "tsc"
   },
   "keywords": [
-    "barebones",
+    "skeletix",
+    "atomic-design",
+    "skeleton",
     "design-system",
     "react",
     "nextjs",
@@ -23,7 +25,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oleasky/barebones.git"
+    "url": "git+https://github.com/oleasky/skeletix.git"
   },
   "peerDependencies": {
     "react": "^18.3.1",
