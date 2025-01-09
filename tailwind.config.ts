@@ -8,11 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['var(--font-roboto)', 'Roboto', 'sans-serif'],
-        serif: ['var(--font-roboto-slab)', 'Roboto Slab', 'serif'],
-        h1: ['var(--font-roboto-slab)', 'Roboto Slab', 'serif'],
-      },
     },
   },
   plugins: [barestyles],

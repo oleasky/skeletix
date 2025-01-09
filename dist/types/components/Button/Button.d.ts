@@ -1,8 +1,17 @@
 import React from 'react';
-interface ButtonProps {
+interface ButtonBaseProps {
     className?: string;
     children: React.ReactNode;
-    onClick?: () => void;
 }
-export declare const Button: ({ children, onClick, className }: ButtonProps) => React.JSX.Element;
+interface ButtonTypeProps extends ButtonBaseProps {
+    type: 'button';
+    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+}
+interface LinkTypeProps extends ButtonBaseProps {
+    type: 'link';
+    href: string;
+    newTab?: boolean;
+}
+type ButtonProps = ButtonTypeProps | LinkTypeProps;
+export declare const Button: (props: ButtonProps) => React.JSX.Element;
 export {};

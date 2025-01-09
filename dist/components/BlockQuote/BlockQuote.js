@@ -15,7 +15,7 @@ const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, className }) 
         react_1.default.createElement("div", { className: 'z-10 top-0 left-0 w-full h-full' },
             react_1.default.createElement("div", { className: `${compId}__content` },
                 react_1.default.createElement("p", { dangerouslySetInnerHTML: { __html: quote } })),
-            react_1.default.createElement(Container_1.Container, { layout: 'row', justifyContent: 'justify-center', alignItems: 'items-center', className: 'gap-3 author text-lg text-center lg:absolute' },
+            react_1.default.createElement(Container_1.Container, { layout: 'row', justifyContent: 'justify-center', alignItems: 'items-center', className: 'gap-3 author text-lg text-center' },
                 react_1.default.createElement("span", null,
                     react_1.default.createElement("strong", null,
                         author,
