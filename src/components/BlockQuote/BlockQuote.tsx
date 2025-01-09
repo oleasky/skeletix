@@ -18,7 +18,7 @@ const compId = 'blockquote'
 
 export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, className }: BlockquoteData) => {
     return (
-        <blockquote className={`testimonial-card relative w-full mx-auto ${compId} ${className}`}>
+        <blockquote className={`bg-[#f8fafc] relative w-full mx-auto p-fluid-lg ${compId} ${className}`}>
             {image && (
                 <figure className={`relative w-[15rem] h-[18rem] mx-auto lg:w-full lg:h-full z-0 ${compId}__image`}>
                     <Image
