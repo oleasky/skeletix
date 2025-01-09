@@ -14,7 +14,7 @@ const compId = 'hero'
 
 export const Hero = ({className, title, content, imageUrl, imageAlt}:HeroProps) => {
     return (
-        <Container htmlTag='section' justifyContent='justify-center' className={`bg-[#64748b] relative ${compId} ${className}`}>
+        <Container htmlTag='section' justifyContent='justify-center' width='full' className={`bg-[#64748b] relative overflow-hidden ${compId} ${className}`}>
             <Container layout='row' width='wide' alignItems='items-center' className={`h-[clamp(26rem, 80vw, 50rem)] mx-auto w-full ${compId}__wrapper`}>
 
                 {imageUrl &&

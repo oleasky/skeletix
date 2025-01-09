@@ -9,7 +9,7 @@ const image_1 = __importDefault(require("next/image"));
 const Container_1 = require("../../components/Container");
 const compId = 'hero';
 const Hero = ({ className, title, content, imageUrl, imageAlt }) => {
-    return (react_1.default.createElement(Container_1.Container, { htmlTag: 'section', justifyContent: 'justify-center', className: `bg-[#64748b] relative ${compId} ${className}` },
+    return (react_1.default.createElement(Container_1.Container, { htmlTag: 'section', justifyContent: 'justify-center', width: 'full', className: `bg-[#64748b] relative overflow-hidden ${compId} ${className}` },
         react_1.default.createElement(Container_1.Container, { layout: 'row', width: 'wide', alignItems: 'items-center', className: `h-[clamp(26rem, 80vw, 50rem)] mx-auto w-full ${compId}__wrapper` },
             imageUrl &&
                 react_1.default.createElement("figure", { className: `absolute w-[100vw] h-full flex-1 z-0 top-0 left-1/2 -translate-x-1/2 opacity-70 ${compId}__image` },
