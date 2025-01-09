@@ -8,7 +8,7 @@ const image_1 = __importDefault(require("next/image"));
 const react_1 = __importDefault(require("react"));
 const Container_1 = require("../Container");
 const compId = 'blockquote';
-const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, className }) => {
+const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, gradYear, className }) => {
     return (react_1.default.createElement("blockquote", { className: `bg-[#f8fafc] relative w-full mx-auto p-fluid-lg ${compId} ${className}` },
         image && (react_1.default.createElement("figure", { className: `relative w-[15rem] h-[18rem] mx-auto lg:w-full lg:h-full z-0 ${compId}__image` },
             react_1.default.createElement(image_1.default, { src: (image === null || image === void 0 ? void 0 : image.src) || '', alt: imageAlt || '', fill: true, sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw", className: 'object-cover object-center' }))),
@@ -22,6 +22,9 @@ const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, className }) 
                         ","),
                     authorTitle && react_1.default.createElement("span", null,
                         " ",
-                        authorTitle))))));
+                        authorTitle),
+                    gradYear && react_1.default.createElement("span", null,
+                        ", ",
+                        gradYear))))));
 };
 exports.BlockQuote = BlockQuote;

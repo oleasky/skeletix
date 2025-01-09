@@ -16,7 +16,7 @@ interface BlockquoteData {
 
 const compId = 'blockquote'
 
-export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, className }: BlockquoteData) => {
+export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, gradYear, className }: BlockquoteData) => {
     return (
         <blockquote className={`bg-[#f8fafc] relative w-full mx-auto p-fluid-lg ${compId} ${className}`}>
             {image && (
@@ -38,7 +38,7 @@ export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, classN
                     layout='row'
                     className={`gap-3 text-lg ${compId}author`}>
                     <span>
-                        <strong>{author},</strong>{authorTitle && <span> {authorTitle}</span>}
+                        <strong>{author},</strong>{authorTitle && <span> {authorTitle}</span>}{gradYear && <span>, {gradYear}</span>}
                     </span>
                 </Container>
             </div>

@@ -4,7 +4,7 @@ export {StatCard} from './components/StatCard';
 export {BlockQuote} from './components/BlockQuote';
 export {Hero} from './components/Hero';
 export {ImageCard} from './components/ImageCard'
-export {ModalButton,ModalContent} from './components/Modal';
+export {ModalButton, ModalContent} from './components/Modal';
 export {StickyCta} from './components/StickyCta';
 export {PageHeader} from './components/sections/PageHeader';
 export {PageFooter} from './components/sections/PageFooter';
