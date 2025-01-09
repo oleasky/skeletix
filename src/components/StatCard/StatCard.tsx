@@ -28,7 +28,7 @@ export const StatCard = ({
     className = ''
 }: StatCardData) => {
     return (
-        <article className={`flex-1 flex flex-col text-center py-fluid-xl px-fluid-xl bg-[#f8fafc] ${compId} ${className}`}>
+        <article className={`flex-1 flex flex-col text-center py-fluid-xl px-fluid-xl bg-[#64748b] ${compId} ${className}`}>
             {statImage && (
                 <figure className={`relative ${compId}__image`}>
                     <Image
