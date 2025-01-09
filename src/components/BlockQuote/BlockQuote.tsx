@@ -20,7 +20,7 @@ export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, classN
     return (
         <blockquote className={`testimonial-card relative w-full mx-auto ${compId} ${className}`}>
             {image && (
-                <figure className='relative w-[15rem] h-[18rem] mx-auto lg:w-full lg:h-full z-0'>
+                <figure className={`relative w-[15rem] h-[18rem] mx-auto lg:w-full lg:h-full z-0 ${compId}__image`}>
                     <Image
                         src={image?.src || ''}
                         alt={imageAlt || ''}
@@ -38,7 +38,7 @@ export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, classN
                     layout='row'
                     justifyContent='justify-center' 
                     alignItems='items-center' 
-                    className='gap-3 author text-lg text-center'>
+                    className={`gap-3 text-lg ${compId}author`}>
                     <span>
                         <strong>{author},</strong>{authorTitle && <span> {authorTitle}</span>}
                     </span>

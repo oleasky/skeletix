@@ -10,7 +10,7 @@ const Container_1 = require("../../Container");
 const Modal_1 = require("../../Modal");
 const compId = 'page-footer';
 const PageFooter = ({ name, phone, address, branding, helpContent, privacyContent, className = '' }) => {
-    return (react_1.default.createElement(Container_1.Container, { htmlTag: 'footer', className: `bg-slate-400 p-fluid-sm z-10 ${compId} ${className}` },
+    return (react_1.default.createElement(Container_1.Container, { htmlTag: 'footer', className: `bg-[#94a3b8] p-fluid-sm z-10 ${compId} ${className}` },
         react_1.default.createElement(Container_1.Container, { alignItems: 'items-center', justifyContent: 'justify-between', className: 'gap-4', layout: 'row' },
             "   ",
             branding &&

@@ -29,11 +29,11 @@ export const StickyCta = ({ formId, offset = 120, children }:StickyCtaProps) => 
     return (
         <Container 
             htmlTag="div" 
-            className={`flex bg-slate-800 sticky bottom-0 p-fluid-sm ${compId}`} 
+            className={`flex bg-[#334155] sticky bottom-0 p-fluid-sm ${compId}`} 
             alignItems="items-center"
         >
             <div className={`flex flex-col items-center justify-center ${compId}__content`}>
-                <button onClick={scrollToForm} className='text-white'>
+                <button onClick={scrollToForm} className='text-[#FFFFFF]'>
                     {children}
                 </button>
             </div>

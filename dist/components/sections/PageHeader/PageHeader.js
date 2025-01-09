@@ -8,7 +8,7 @@ const image_1 = __importDefault(require("next/image"));
 const react_1 = __importDefault(require("react"));
 const Container_1 = require("../../Container");
 const PageHeader = ({ className = '', logoUrl, logoAlt, children }) => {
-    return (react_1.default.createElement(Container_1.Container, { htmlTag: 'header', layout: 'row', alignItems: 'items-center', className: `page-header flex p-fluid-sm bg-slate-300 ${className}` },
+    return (react_1.default.createElement(Container_1.Container, { htmlTag: 'header', layout: 'row', alignItems: 'items-center', className: `page-header flex p-fluid-sm bg-[#cbd5e1] ${className}` },
         react_1.default.createElement(Container_1.Container, { width: 'wide', className: 'mx-auto w-full' },
             logoUrl &&
                 react_1.default.createElement("figure", { className: 'logo w-fluid-3xl block h-fluid-lg relative' },

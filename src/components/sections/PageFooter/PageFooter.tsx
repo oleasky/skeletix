@@ -35,7 +35,7 @@ export const PageFooter = ({
     return (
         <Container
             htmlTag='footer'
-            className={`bg-slate-400 p-fluid-sm z-10 ${compId} ${className}`}
+            className={`bg-[#94a3b8] p-fluid-sm z-10 ${compId} ${className}`}
         >
             <Container
                 alignItems='items-center'

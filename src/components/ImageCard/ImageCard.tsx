@@ -16,7 +16,7 @@ const compId = 'image-card'
 
 export const ImageCard = ({image, altText, title, content, children, className=''}:ImageCardProps) => {
   return (
-    <Container htmlTag="article" className={`md:flex-row bg-[#f1f5f9] ${compId}`} layout='row'>
+    <Container htmlTag="article" className={`md:flex-row bg-[#f1f5f9] ${compId} ${className}`} layout='row'>
         {image && (
           <figure className='flex-0 relative md:w-3/5'>
             <Image
