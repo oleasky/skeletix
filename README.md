@@ -1,6 +1,6 @@
-# 🦴 barebones
+# 🦴 BareUI
 
-**barebones** is a lightweight wireframing design system built with **React** and **TailwindCSS**. It’s designed to speed up prototyping and serve as a boilerplate for new projects, including **Next.js** apps. With a minimal yet powerful set of pre-built components, `barebones` empowers you to quickly create, customize, and iterate on designs.
+**BareUI** is a lightweight wireframing design system built with **React** and **TailwindCSS**. It’s designed to speed up prototyping and serve as a boilerplate for new projects, including **Next.js** apps. With a minimal yet powerful set of pre-built components, `BareUI` empowers you to quickly create, customize, and iterate on designs.
 
 ---
 
@@ -16,20 +16,20 @@
 
 ## 📦 Installation
 
-### Step 1: Install `barebones`
+### Step 1: Install `BareUI`
 
 ```bash
-npm install barebones
+npm install bareui
 ```
 
 Or with Yarn:
 
 ```bash
-yarn add barebones
+yarn add bareui
 ```
 
 ### Step 2: Install Peer Dependencies
-`barebones` requires React, React DOM, TailwindCSS, and optionally Next.js. Ensure these are installed in your project:
+`BareUI` requires React, React DOM, TailwindCSS, and optionally Next.js. Ensure these are installed in your project:
 
 ```bash
 npm install react react-dom tailwindcss
@@ -42,13 +42,13 @@ npm install next
 ```
 
 ### Step 3: TailwindCSS Configuration
-Ensure your `tailwind.config.js` includes `barebones` in the `content` array:
+Ensure your `tailwind.config.js` includes `BareUI` in the `content` array:
 
 ```javascript
 module.exports = {
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
-    './node_modules/barebones/**/*.{js,ts,jsx,tsx}'
+    './node_modules/BareUI/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {},
@@ -59,22 +59,23 @@ module.exports = {
 
 #### TailwindCSS Integration with `barestyles`
 
-`barebones` components work best when the `barestyles` TailwindCSS plugin is installed. If `barestyles` is not detected, components will render without `barestyles`-specific utility classes, and you may see a warning in the console.
+`BareUI` components work best when the `barestyles` TailwindCSS plugin is installed. If `barestyles` is not detected, components will render without `barestyles`-specific utility classes, and you may see a warning in the console.
 
 ### Installation
-To use `barebones` with `barestyles`:
+To use `BareUI` with `barestyles`:
 1. Install the required packages:
    ```bash
-   npm install barestyles barebones
+   npm install barestyles
+   ```
 
 
 ## 🛠️ Usage
 
 ### Basic Example
-Start using barebones components in your project:
+Start using BareUI components in your project:
 
 ```javascript
-import { Container, Button } from 'barebones';
+import { Container, Button } from 'bareui';
 
 export default function App() {
   return (
@@ -97,15 +98,15 @@ Add your own TailwindCSS classes to customize the components:
 
 ## ⚡ Advanced Features
 ### Next.js Integration
-Some `barebones` components use NextJS components, like `next/Image`. If you aren't using NextJs these components won't be available ... FOR NOW!
+Some `BareUI` components use NextJS components, like `next/Image`. If you aren't using NextJs these components won't be available ... FOR NOW!
 
 ## 🌈 Styling and Customization
-- `barebones` components are built with TailwindCSS defaults.
+- `BareUI` components are built with TailwindCSS defaults.
 - You can override styles by passing className props.
 - Add your own custom utilities in tailwind.config.js.
 
 ## 🛡️ Best Practices
-- Always include barebones in your TailwindCSS content array.
+- Always include BareUI in your TailwindCSS content array.
 - Use the className prop to fully customize component styles.
 - Combine with barestyles for advanced TailwindCSS utilities.
 
@@ -116,9 +117,9 @@ Contributions are welcome! If you have ideas for new components or improvements,
 Special thanks to the open-source community and the creators of React, TailwindCSS, and Next.js for providing the tools that make projects like this possible.
 
 ## 🚧 Roadmap
-🛠 Add fallbacks for NextJS components
+🛠 Add NextJS components fallbacks for other frameworks, like astro
 🛠 Add more components for layouts and interactivity.
 ✨ Support for dark mode customization.
 🌍 Localization-ready components.
 
-## Happy prototyping with barebones! 🎉
+## Happy prototyping with BareUI! 🎉

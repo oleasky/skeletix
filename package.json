@@ -1,7 +1,7 @@
 {
-  "name": "barebones",
+  "name": "bareui",
   "version": "0.0.6",
-  "description": "A barebones wireframing design system for rapid prototyping and Next.js boilerplate projects.",
+  "description": "BareUI is wireframing design system for rapid prototyping and boilerplate React based projects.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -23,7 +23,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/oleasky/barebones.git"
+    "url": "git+https://github.com/oleasky/barebones.git"
   },
   "peerDependencies": {
     "react": "^18.3.1",
