@@ -7,14 +7,40 @@ interface HeaderProps {
     logoUrl?: string;
     logoAlt?: string;
     children?: React.ReactNode;
+    logoWidth?: string;
+    logoHeight?: string;
 }
 
-export const PageHeader: React.FC<HeaderProps> = ({ className, logoUrl, logoAlt, children }) => {
+const compId = 'page-header'
+
+export const PageHeader = ({ className, logoUrl, logoAlt, children, logoHeight, logoWidth } : HeaderProps) => {
+    
+    let logoWidthSize = 'w-fluid-3xl'
+    let logoHeightSize = 'h-fluid-lg'
+
+    if (logoWidth) {
+        logoWidthSize = `${logoWidth}`
+    }
+
+    if (logoHeight) {
+        logoHeightSize = `${logoHeight}`
+    }
+
+    const logoClasses = [
+        'block',
+        'relative',
+        logoHeightSize,
+        logoWidthSize,
+        `${compId}__logo`,
+    ] 
+    .filter(Boolean)
+    .join(' ');
+
     return (
-        <Container htmlTag='header' layout='row' alignItems='items-center' className={`page-header flex p-fluid-sm bg-[#cbd5e1] ${className}`}>
-            <Container width='wide' alignItems='items-center' className='mx-auto w-full'>
+        <Container htmlTag='header' layout='row' alignItems='items-center' className={`flex p-fluid-sm bg-[#cbd5e1] ${compId} ${className}`}>
+            <Container width='wide' className='mx-auto w-full'>
                 { logoUrl && 
-                    <figure className='logo w-fluid-3xl block h-fluid-lg relative'>
+                    <figure className={logoClasses}>
                         <Image
                             src={logoUrl}
                             alt={logoAlt || 'Logo Header'}
