@@ -13,12 +13,13 @@ interface HeroProps {
 const compId = 'hero'
 
 export const Hero = ({className, title, content, imageUrl, imageAlt}:HeroProps) => {
+
     return (
         <Container htmlTag='section' justifyContent='justify-center' width='full' className={`bg-[#64748b] relative overflow-hidden ${compId} ${className}`}>
             <Container layout='row' width='wide' alignItems='items-center' className={`h-[clamp(26rem, 80vw, 50rem)] mx-auto w-full ${compId}__wrapper`}>
 
                 {imageUrl &&
-                    <figure className={`absolute w-[100vw] h-full flex-1 z-0 top-0 left-1/2 -translate-x-1/2 opacity-70 ${compId}__image`}>
+                    <figure className={`absolute w-[100vw] h-full flex-1 z-0 top-0 left-1/2 -translate-x-1/2 ${compId}__image`}>
                         <Image
                             src={imageUrl}
                             alt={imageAlt || 'Image Alt'}
@@ -31,7 +32,7 @@ export const Hero = ({className, title, content, imageUrl, imageAlt}:HeroProps) 
                     </figure>
                 }
 
-                <Container layout='col' className={`py-fluid-2xl px-fluid-md z-10 w-full lg:w-1/2 relative text-center lg:text-left ${compId}__content`}>
+                <Container layout='col' className={`py-fluid-2xl px-fluid-md z-10 w-full mq-1200:w-1/2 relative text-center lg:text-left ${compId}__content`}>
                     <h1>
                         <span dangerouslySetInnerHTML={{ __html: title ?? '' }} />
                     </h1>

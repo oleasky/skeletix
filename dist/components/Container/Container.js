@@ -30,9 +30,9 @@ const Container = ({ htmlTag: Tag = 'div', id = '', className = '', layout = 'co
         id,
         barestylesWidthClass, // Only apply if `barestyles` is available
         layoutClasses,
-        className,
         alignItems,
         justifyContent,
+        className,
     ]
         .filter(Boolean)
         .join(' ');

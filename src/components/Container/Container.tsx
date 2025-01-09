@@ -47,9 +47,9 @@ export const Container = ({
         id,
         barestylesWidthClass, // Only apply if `barestyles` is available
         layoutClasses,
-        className,
         alignItems,
         justifyContent,
+        className,
     ]
         .filter(Boolean)
         .join(' ');
