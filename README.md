@@ -1,6 +1,6 @@
-# 🦴 BareUI
+# 🦴 Skeletix
 
-**BareUI** is a lightweight wireframing design system built with **React** and **TailwindCSS**. It’s designed to speed up prototyping and serve as a boilerplate for new projects, including **Next.js** apps. With a minimal yet powerful set of pre-built components, `BareUI` empowers you to quickly create, customize, and iterate on designs.
+**Skeletix** is a lightweight wireframing design system built with **React** and **TailwindCSS**. It’s designed to speed up prototyping and serve as a boilerplate for new projects, including **Next.js** apps. With a minimal yet powerful set of pre-built components, `skeletix` empowers you to quickly create, customize, and iterate on designs.
 
 ---
 
@@ -16,20 +16,20 @@
 
 ## 📦 Installation
 
-### Step 1: Install `BareUI`
+### Step 1: Install `skeletix`
 
 ```bash
-npm install bareui
+npm install skeletix
 ```
 
 Or with Yarn:
 
 ```bash
-yarn add bareui
+yarn add skeletix
 ```
 
 ### Step 2: Install Peer Dependencies
-`BareUI` requires React, React DOM, TailwindCSS, and optionally Next.js. Ensure these are installed in your project:
+`skeletix` requires React, React DOM, TailwindCSS, and optionally Next.js. Ensure these are installed in your project:
 
 ```bash
 npm install react react-dom tailwindcss
@@ -42,13 +42,13 @@ npm install next
 ```
 
 ### Step 3: TailwindCSS Configuration
-Ensure your `tailwind.config.js` includes `BareUI` in the `content` array:
+Ensure your `tailwind.config.js` includes `skeletix` in the `content` array:
 
 ```javascript
 module.exports = {
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
-    './node_modules/BareUI/**/*.{js,ts,jsx,tsx}'
+    './node_modules/skeletix/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {},
@@ -59,10 +59,10 @@ module.exports = {
 
 #### TailwindCSS Integration with `barestyles`
 
-`BareUI` components work best when the `barestyles` TailwindCSS plugin is installed. If `barestyles` is not detected, components will render without `barestyles`-specific utility classes, and you may see a warning in the console.
+`skeletix` components work best when the `barestyles` TailwindCSS plugin is installed. If `barestyles` is not detected, components will render without `barestyles`-specific utility classes, and you may see a warning in the console.
 
 ### Installation
-To use `BareUI` with `barestyles`:
+To use `skeletix` with `barestyles`:
 1. Install the required packages:
    ```bash
    npm install barestyles
@@ -72,10 +72,10 @@ To use `BareUI` with `barestyles`:
 ## 🛠️ Usage
 
 ### Basic Example
-Start using BareUI components in your project:
+Start using skeletix components in your project:
 
 ```javascript
-import { Container, Button } from 'bareui';
+import { Container, Button } from 'skeletix';
 
 export default function App() {
   return (
@@ -98,15 +98,15 @@ Add your own TailwindCSS classes to customize the components:
 
 ## ⚡ Advanced Features
 ### Next.js Integration
-Some `BareUI` components use NextJS components, like `next/Image`. If you aren't using NextJs these components won't be available ... FOR NOW!
+Some `skeletix` components use NextJS components, like `next/Image`. If you aren't using NextJs these components won't be available ... FOR NOW!
 
 ## 🌈 Styling and Customization
-- `BareUI` components are built with TailwindCSS defaults.
+- `skeletix` components are built with TailwindCSS defaults.
 - You can override styles by passing className props.
 - Add your own custom utilities in tailwind.config.js.
 
 ## 🛡️ Best Practices
-- Always include BareUI in your TailwindCSS content array.
+- Always include skeletix in your TailwindCSS content array.
 - Use the className prop to fully customize component styles.
 - Combine with barestyles for advanced TailwindCSS utilities.
 
@@ -122,4 +122,4 @@ Special thanks to the open-source community and the creators of React, TailwindC
 ✨ Support for dark mode customization.
 🌍 Localization-ready components.
 
-## Happy prototyping with BareUI! 🎉
+## Happy prototyping with skeletix! 🎉
