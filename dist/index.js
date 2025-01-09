@@ -18,6 +18,7 @@ __exportStar(require("./components/Container"), exports);
 __exportStar(require("./components/Button"), exports);
 __exportStar(require("./components/StatCard"), exports);
 __exportStar(require("./components/BlockQuote"), exports);
+__exportStar(require("./components/Hero"), exports);
 __exportStar(require("./components/ImageCard"), exports);
 __exportStar(require("./components/Modal"), exports);
 __exportStar(require("./components/StickyCta"), exports);

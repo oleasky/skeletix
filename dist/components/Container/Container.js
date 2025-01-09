@@ -10,7 +10,22 @@ const Container = ({ htmlTag: Tag = 'div', id = '', className = '', layout = 'co
     const isBarestyles = (0, detectBarestyles_1.isBarestylesInstalled)();
     // Conditionally include classes based on `barestyles`
     const layoutClasses = layout === 'col' ? 'flex flex-col' : 'flex flex-row';
-    const barestylesWidthClass = isBarestyles ? `max-w-${width}` : '';
+    let barestylesWidthClass = '';
+    if (isBarestyles) {
+        switch (width) {
+            case 'full':
+                barestylesWidthClass = 'max-w-full';
+                break;
+            case 'wide':
+                barestylesWidthClass = 'max-w-wide';
+                break;
+            case 'narrow':
+                barestylesWidthClass = 'max-w-narrow';
+                break;
+            default:
+                barestylesWidthClass = '';
+        }
+    }
     const containerClasses = [
         id,
         barestylesWidthClass, // Only apply if `barestyles` is available

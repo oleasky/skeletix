@@ -9,10 +9,10 @@ interface HeaderProps {
     children?: React.ReactNode;
 }
 
-export const PageHeader: React.FC<HeaderProps> = ({ className = '', logoUrl, logoAlt, children }) => {
+export const PageHeader: React.FC<HeaderProps> = ({ className, logoUrl, logoAlt, children }) => {
     return (
         <Container htmlTag='header' layout='row' alignItems='items-center' className={`page-header flex p-fluid-sm bg-[#cbd5e1] ${className}`}>
-            <Container width='wide' className='mx-auto w-full'>
+            <Container width='wide' alignItems='items-center' className='mx-auto w-full'>
                 { logoUrl && 
                     <figure className='logo w-fluid-3xl block h-fluid-lg relative'>
                         <Image
