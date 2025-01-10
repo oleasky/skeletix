@@ -5,6 +5,7 @@ interface HeroProps {
     content?: string;
     imageUrl?: string;
     imageAlt?: string;
+    children?: React.ReactNode;
 }
-export declare const Hero: ({ className, title, content, imageUrl, imageAlt }: HeroProps) => React.JSX.Element;
+export declare const Hero: ({ className, title, content, imageUrl, imageAlt, children }: HeroProps) => React.JSX.Element;
 export {};

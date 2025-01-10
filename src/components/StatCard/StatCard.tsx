@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 interface StatCardData {
     statData?: {
-        line1: string;
+        line1?: string;
         line2: string;
     }
     statDescriptor?: string;

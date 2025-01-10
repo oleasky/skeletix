@@ -18,9 +18,9 @@ const compId = 'blockquote'
 
 export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, gradYear, className }: BlockquoteData) => {
     return (
-        <blockquote className={`bg-[#f8fafc] relative w-full mx-auto p-fluid-lg ${compId} ${className}`}>
+        <blockquote className={`bg-[#f8fafc] relative w-full mx-auto  ${compId} ${className}`}>
             {image && (
-                <figure className={`relative w-[15rem] h-[18rem] mx-auto lg:w-full lg:h-full z-0 ${compId}__image`}>
+                <figure className={`relative w-[15rem] h-[18rem] mx-auto lg:w-full z-0 ${compId}__image`}>
                     <Image
                         src={image?.src || ''}
                         alt={imageAlt || ''}
@@ -30,15 +30,15 @@ export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, gradYe
                     />
                 </figure>
             )}
-            <div className='z-10 top-0 left-0 w-full h-full'>
-                <div className={`${compId}__content`}>
+            <div className={`z-10 top-0 left-0 w-full h-full ${compId}__content`}>
+                <div>
                     <p dangerouslySetInnerHTML={{ __html: quote }} />
                 </div>
                 <Container 
                     layout='row'
-                    className={`gap-3 text-lg ${compId}author`}>
+                    className={`gap-3 text-lg ${compId}__author`}>
                     <span>
-                        <strong>{author},</strong>{authorTitle && <span> {authorTitle}</span>}{gradYear && <span>, {gradYear}</span>}
+                        <strong>{author}</strong>{authorTitle && <span>, {authorTitle}</span>}{gradYear && <span>, {gradYear}</span>}
                     </span>
                 </Container>
             </div>

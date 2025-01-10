@@ -8,11 +8,12 @@ interface HeroProps {
     content?: string;
     imageUrl?: string;
     imageAlt?: string;
+    children?: React.ReactNode;
 }
 
 const compId = 'hero'
 
-export const Hero = ({className, title, content, imageUrl, imageAlt}:HeroProps) => {
+export const Hero = ({className, title, content, imageUrl, imageAlt, children}:HeroProps) => {
 
     return (
         <Container htmlTag='section' justifyContent='justify-center' width='full' className={`bg-[#64748b] relative overflow-hidden ${compId} ${className}`}>
@@ -33,10 +34,14 @@ export const Hero = ({className, title, content, imageUrl, imageAlt}:HeroProps) 
                 }
 
                 <Container layout='col' className={`py-fluid-2xl px-fluid-md z-10 w-full mq-1200:w-1/2 relative text-center lg:text-left ${compId}__content`}>
-                    <h1>
-                        <span dangerouslySetInnerHTML={{ __html: title ?? '' }} />
-                    </h1>
-                    <p dangerouslySetInnerHTML={{__html: content ?? ''}} />
+                    {children ? children :
+                    <>
+                        <h1>
+                            <span dangerouslySetInnerHTML={{ __html: title ?? '' }} />
+                        </h1>
+                        <p dangerouslySetInnerHTML={{__html: content ?? ''}} />
+                    </>
+                    }
                 </Container>
 
             </Container>
