@@ -38,9 +38,10 @@ export const PageFooter = ({
             className={`bg-[#94a3b8] p-fluid-sm z-10 ${compId} ${className}`}
         >
             <Container
+                width='wide'
                 alignItems='items-center'
                 justifyContent='justify-between'
-                className='gap-4'
+                className={`gap-4 mx-auto ${compId}__wrapper`}
                 layout='row'
             >   {branding &&
                     <Container layout='row' className='school-info flex gap-4 items-center basis-4/5'>
