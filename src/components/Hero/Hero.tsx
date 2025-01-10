@@ -1,12 +1,12 @@
 import React from 'react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { Container } from '../../components/Container'
 
 interface HeroProps {
     className?: string;
     title?: string;
     content?: string;
-    imageUrl?: string;
+    imageUrl?: string | StaticImageData;
     imageAlt?: string;
     children?: React.ReactNode;
 }
