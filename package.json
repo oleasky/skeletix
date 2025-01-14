@@ -1,6 +1,6 @@
 {
   "name": "skeletix",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Skeletix is wireframing design system for rapid prototyping and boilerplate React based projects.",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
