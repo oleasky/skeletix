@@ -25,7 +25,7 @@ export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, gradYe
                         src={image?.src || ''}
                         alt={imageAlt || ''}
                         fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1000px) 80vw, (max-width: 1280px) 70vw"
                         className='object-cover object-center'
                     />
                 </figure>
