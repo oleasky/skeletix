@@ -28,7 +28,7 @@ export const Hero = ({className, title, content, imageUrl, imageAlt, children}:H
                             priority
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
                             placeholder='blur'
-                            className='object-cover'
+                            className='object-fit'
                         />
                     </figure>
                 }
