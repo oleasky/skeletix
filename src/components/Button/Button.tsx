@@ -30,7 +30,7 @@ export const Button = (props: ButtonProps) => {
                 href={href}
                 target={newTab ? '_blank' : undefined}
                 rel={newTab ? 'noopener noreferrer' : undefined}
-                className={`px-4 py-2 text-[#FFFFFF] bg-[#64748b] rounded hover:bg-[#0f172a] ${compId} ${className}`}
+                className={`p-4 text-[#FFFFFF] bg-[#64748b] rounded hover:bg-[#0f172a] ${compId} ${className}`}
             >
                 <span className={`${compId}__text`}>{children}</span>
             </a>
