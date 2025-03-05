@@ -6,9 +6,9 @@ export function isBarestylesInstalled(): boolean {
         return true;
     } catch (e) {
         if (!warned) {
-            console.warn(
-                '[Skeletics] TailwindCSS plugin "barestyles" is not installed. Some utility classes may not render as expected.'
-            );
+            // console.warn(
+            //     '[Skeletics] TailwindCSS plugin "barestyles" is not installed. Some utility classes may not render as expected.'
+            // );
             warned = true;
         }
         return false;
