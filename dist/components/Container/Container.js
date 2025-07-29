@@ -23,7 +23,7 @@ const Container = ({ htmlTag: Tag = 'div', id = '', className = '', layout = 'co
                 barestylesWidthClass = 'max-w-narrow';
                 break;
             default:
-                barestylesWidthClass = '';
+                barestylesWidthClass = 'max-w-default';
         }
     }
     const containerClasses = [
