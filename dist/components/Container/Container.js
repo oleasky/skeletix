@@ -9,7 +9,7 @@ const detectBarestyles_1 = require("../../utils/detectBarestyles");
 const Container = ({ htmlTag: Tag = 'div', id = '', className = '', layout = 'col', alignItems, justifyContent, width = 'full', children, }) => {
     const isBarestyles = (0, detectBarestyles_1.isBarestylesInstalled)();
     // Conditionally include classes based on `barestyles`
-    const layoutClasses = layout === 'col' ? 'flex flex-col' : 'flex flex-row';
+    const layoutClasses = layout === 'col' ? 'flex flex-col' : 'flex flex-col md:flex-row';
     let barestylesWidthClass = '';
     if (isBarestyles) {
         switch (width) {
