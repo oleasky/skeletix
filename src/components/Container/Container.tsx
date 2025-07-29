@@ -39,7 +39,7 @@ export const Container = ({
                 barestylesWidthClass = 'max-w-narrow';
                 break;
             default:
-                barestylesWidthClass = '';
+                barestylesWidthClass = 'max-w-default';
         }
     }
 

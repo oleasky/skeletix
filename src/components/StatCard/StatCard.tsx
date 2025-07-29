@@ -12,7 +12,21 @@ interface StatCardData {
         src: string;
         alt: string;
     }
-    className?: string;
+    cardClassName?: string;
+    figureClasses?: {
+        root?: string;
+        img?: string;
+    };
+    contentClasses?: {
+        root?: string;
+        descriptor?: string;
+        heading?: {
+            root?: string;
+            line1?: string;
+            line2?: string;
+        };
+    };
+    sourceClassName?: string;
 }
 
 const compId = 'statistic-card'
@@ -25,26 +39,36 @@ export const StatCard = ({
     statDescriptor,
     statSource,
     statImage,
-    className = ''
+    cardClassName = '',
+    figureClasses = {},
+    contentClasses = {},
+    sourceClassName = ''
 }: StatCardData) => {
+    const headingClasses = contentClasses.heading || {};
     return (
-        <article className={`flex-1 flex flex-col text-center py-fluid-xl px-fluid-xl bg-[#64748b] ${compId} ${className}`}>
+        <article className={`flex-1 flex flex-col text-center py-fluid-xl px-fluid-xl bg-[#64748b] ${compId}${cardClassName ? ' ' + cardClassName : ''}`}>
             {statImage && (
-                <figure className={`relative ${compId}__image`}>
+                <figure className={`relative ${compId}__image${figureClasses.root ? ' ' + figureClasses.root : ''}`}>
                     <Image
                         src={statImage.src}
                         alt={statImage.alt}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        {...(figureClasses.img ? { className: figureClasses.img } : {})}
                     />
                 </figure>
             )}
-            <div className={`${compId}__content`}>
-                <h2 className='text-fluid-xl'>
-                    {statData?.line1} <span className='block text-[1.7em]'>{statData?.line2}</span>
+            <div className={`${compId}__content${contentClasses.root ? ' ' + contentClasses.root : ''}`}>
+                <h2 className={`text-fluid-xl${headingClasses.root ? ' ' + headingClasses.root : ''}`}>
+                    {statData.line1 && (
+                        <span className={headingClasses.line1}>{statData.line1}</span>
+                    )}
+                    {statData.line2 && (
+                        <span className={`block text-[1.7em]${headingClasses.line2 ? ' ' + headingClasses.line2 : ''}`}>{statData.line2}</span>
+                    )}
                 </h2>
-                {statDescriptor && <p className='font-h2'>{statDescriptor}</p>}
-                {statSource && <small>{statSource}</small>}
+                {statDescriptor && <p className={`font-h2${contentClasses.descriptor ? ' ' + contentClasses.descriptor : ''}`}>{statDescriptor}</p>}
+                {statSource && <small {...(sourceClassName ? { className: sourceClassName } : {})}>{statSource}</small>}
             </div>
         </article>
     )
