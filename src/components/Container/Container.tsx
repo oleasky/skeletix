@@ -25,7 +25,7 @@ export const Container = ({
     const isBarestyles = isBarestylesInstalled();
 
     // Conditionally include classes based on `barestyles`
-    const layoutClasses = layout === 'col' ? 'flex flex-col' : 'flex flex-row';
+    const layoutClasses = layout === 'col' ? 'flex flex-col' : 'flex flex-col md:flex-row';
     let barestylesWidthClass = '';
     if (isBarestyles) {
         switch (width) {
