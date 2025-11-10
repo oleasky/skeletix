@@ -1,9 +1,16 @@
 {
   "name": "skeletix",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Skeletix is wireframing design system for rapid prototyping and boilerplate React based projects.",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -30,7 +37,7 @@
   },
   "peerDependencies": {
     "barestyles": "^1.1.0",
-    "next": "^15.1.4",
+    "next": "^15.1.4 || ^16.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

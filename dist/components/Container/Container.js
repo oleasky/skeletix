@@ -1,13 +1,7 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Container = void 0;
-const react_1 = __importDefault(require("react"));
-const detectBarestyles_1 = require("../../utils/detectBarestyles");
-const Container = ({ htmlTag: Tag = 'div', id = '', className = '', layout = 'col', alignItems, justifyContent, width = 'full', children, }) => {
-    const isBarestyles = (0, detectBarestyles_1.isBarestylesInstalled)();
+import React from 'react';
+import { isBarestylesInstalled } from '../../utils/detectBarestyles';
+export const Container = ({ htmlTag: Tag = 'div', id = '', className = '', layout = 'col', alignItems, justifyContent, width = 'full', children, }) => {
+    const isBarestyles = isBarestylesInstalled();
     // Conditionally include classes based on `barestyles`
     const layoutClasses = layout === 'col' ? 'flex flex-col' : 'flex flex-col md:flex-row';
     let barestylesWidthClass = '';
@@ -36,6 +30,5 @@ const Container = ({ htmlTag: Tag = 'div', id = '', className = '', layout = 'co
     ]
         .filter(Boolean)
         .join(' ');
-    return react_1.default.createElement(Tag, { id: id, className: containerClasses }, children);
+    return React.createElement(Tag, { id: id, className: containerClasses }, children);
 };
-exports.Container = Container;

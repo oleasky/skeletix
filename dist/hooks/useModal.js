@@ -1,10 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.useModal = void 0;
-const react_1 = require("react");
-const useModal = () => {
-    const [isOpen, setIsOpen] = (0, react_1.useState)(false);
-    const [modalContent, setModalContent] = (0, react_1.useState)(null);
+import { useState } from "react";
+export const useModal = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [modalContent, setModalContent] = useState(null);
     const handleOpenModal = (content) => {
         setIsOpen(true);
         setModalContent(content);
@@ -20,4 +17,3 @@ const useModal = () => {
         handleCloseModal,
     };
 };
-exports.useModal = useModal;
