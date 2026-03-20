@@ -12,15 +12,16 @@ interface BlockquoteData {
     }
     imageAlt?: string
     className?: string
+    figureClassName?: string
 }
 
 const compId = 'blockquote'
 
-export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, gradYear, className }: BlockquoteData) => {
+export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, gradYear, className, figureClassName }: BlockquoteData) => {
     return (
         <blockquote className={`bg-[#f8fafc] relative w-full mx-auto  ${compId} ${className}`}>
             {image && (
-                <figure className={`relative w-[15rem] h-[18rem] mx-auto lg:w-full z-0 ${compId}__image`}>
+                <figure className={`relative w-[15rem] h-[18rem] mx-auto lg:w-full z-0 ${compId}__image ${figureClassName}`}>
                     <Image
                         src={image?.src || ''}
                         alt={imageAlt || ''}

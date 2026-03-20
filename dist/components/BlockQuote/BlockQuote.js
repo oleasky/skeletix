@@ -2,9 +2,9 @@ import Image from 'next/image';
 import React from 'react';
 import { Container } from '../Container';
 const compId = 'blockquote';
-export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, gradYear, className }) => {
+export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, gradYear, className, figureClassName }) => {
     return (React.createElement("blockquote", { className: `bg-[#f8fafc] relative w-full mx-auto  ${compId} ${className}` },
-        image && (React.createElement("figure", { className: `relative w-[15rem] h-[18rem] mx-auto lg:w-full z-0 ${compId}__image` },
+        image && (React.createElement("figure", { className: `relative w-[15rem] h-[18rem] mx-auto lg:w-full z-0 ${compId}__image ${figureClassName}` },
             React.createElement(Image, { src: image?.src || '', alt: imageAlt || '', fill: true, sizes: "(max-width: 768px) 100vw, (max-width: 1000px) 80vw, (max-width: 1280px) 70vw, 50vw", quality: 85, loading: 'lazy', className: 'object-cover object-center' }))),
         React.createElement("div", { className: `z-10 top-0 left-0 w-full h-full ${compId}__content` },
             React.createElement("div", null,
