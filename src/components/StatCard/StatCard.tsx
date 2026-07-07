@@ -12,6 +12,7 @@ interface StatCardData {
         src: string;
         alt: string;
     }
+    quality?: number;
     classNames?:{
         card?: string;
         figureClasses?: {
@@ -41,6 +42,7 @@ export const StatCard = ({
     statDescriptor,
     statSource,
     statImage,
+    quality = 85,
     classNames = {}
 }: StatCardData) => {
     const headingClasses = classNames.contentClasses?.heading || {};
@@ -52,6 +54,7 @@ export const StatCard = ({
                         src={statImage.src}
                         alt={statImage.alt}
                         fill
+                        quality={quality}
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         {...(classNames.figureClasses?.img ? { className: classNames.figureClasses.img } : {})}
                     />

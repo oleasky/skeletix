@@ -8,12 +8,13 @@ interface HeroProps {
     content?: string;
     imageUrl?: string | StaticImageData;
     imageAlt?: string;
+    quality?: number;
     children?: React.ReactNode;
 }
 
 const compId = 'hero'
 
-export const Hero = ({className, title, content, imageUrl, imageAlt, children}:HeroProps) => {
+export const Hero = ({className, title, content, imageUrl, imageAlt, quality = 95, children}:HeroProps) => {
 
     return (
         <Container htmlTag='section' justifyContent='justify-center' width='full' className={`bg-[#64748b] relative overflow-hidden ${compId} ${className}`}>
@@ -26,6 +27,7 @@ export const Hero = ({className, title, content, imageUrl, imageAlt, children}:H
                             alt={imageAlt || 'Image Alt'}
                             fill
                             priority
+                            quality={quality}
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
                             placeholder='blur'
                             className='object-cover'

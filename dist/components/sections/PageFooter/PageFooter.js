@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Container } from '../../Container';
 import { ModalButton } from '../../Modal';
 const compId = 'page-footer';
-export const PageFooter = ({ name, phone, address, branding, helpContent, privacyContent, className = '' }) => {
+export const PageFooter = ({ name, phone, address, branding, quality = 85, helpContent, privacyContent, className = '' }) => {
     return (React.createElement(Container, { htmlTag: 'footer', className: `bg-[#94a3b8] p-fluid-sm z-10 ${compId} ${className}` },
         React.createElement(Container, { width: 'wide', alignItems: 'items-center', justifyContent: 'justify-between', className: `gap-4 mx-auto ${compId}__wrapper`, layout: 'row' },
             "   ",
@@ -11,7 +11,7 @@ export const PageFooter = ({ name, phone, address, branding, helpContent, privac
                 React.createElement(Container, { layout: 'row', className: 'school-info flex gap-4 items-center basis-4/5' },
                     branding &&
                         React.createElement("figure", { className: `relative w-fluid-xl h-fluid-md ${compId}__logo` },
-                            React.createElement(Image, { src: branding?.logoFooter, alt: branding?.logoAlt, fill: true })),
+                            React.createElement(Image, { src: branding?.logoFooter, alt: branding?.logoAlt, fill: true, quality: quality })),
                     address &&
                         React.createElement("div", { className: `flex w-full ${compId}__contact-info` },
                             React.createElement("address", null,

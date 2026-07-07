@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import { Container } from '../../Container';
 const compId = 'page-header';
-export const PageHeader = ({ className, logoUrl, logoAlt, children, logoHeight, logoWidth }) => {
+export const PageHeader = ({ className, logoUrl, logoAlt, children, logoHeight, logoWidth, quality = 85 }) => {
     let logoWidthSize = 'w-fluid-3xl';
     let logoHeightSize = 'h-fluid-lg';
     if (logoWidth) {
@@ -24,6 +24,6 @@ export const PageHeader = ({ className, logoUrl, logoAlt, children, logoHeight, 
         React.createElement(Container, { width: 'wide', className: 'mx-auto w-full' },
             logoUrl &&
                 React.createElement("figure", { className: logoClasses },
-                    React.createElement(Image, { src: logoUrl, alt: logoAlt || 'Logo Header', fill: true, priority: true })),
+                    React.createElement(Image, { src: logoUrl, alt: logoAlt || 'Logo Header', fill: true, priority: true, quality: quality })),
             children && React.createElement(Container, { className: 'flex items-center justify-between' }, children))));
 };

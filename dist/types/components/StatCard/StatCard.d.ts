@@ -10,6 +10,7 @@ interface StatCardData {
         src: string;
         alt: string;
     };
+    quality?: number;
     classNames?: {
         card?: string;
         figureClasses?: {
@@ -28,5 +29,5 @@ interface StatCardData {
         source?: string;
     };
 }
-export declare const StatCard: ({ statData, statDescriptor, statSource, statImage, classNames }: StatCardData) => React.JSX.Element;
+export declare const StatCard: ({ statData, statDescriptor, statSource, statImage, quality, classNames }: StatCardData) => React.JSX.Element;
 export {};

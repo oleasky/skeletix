@@ -11,13 +11,14 @@ interface BlockquoteData {
         src: string,
     }
     imageAlt?: string
+    quality?: number
     className?: string
     figureClassName?: string
 }
 
 const compId = 'blockquote'
 
-export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, gradYear, className, figureClassName }: BlockquoteData) => {
+export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, gradYear, quality = 85, className, figureClassName }: BlockquoteData) => {
     return (
         <blockquote className={`bg-[#f8fafc] relative w-full mx-auto  ${compId} ${className}`}>
             {image && (
@@ -27,7 +28,7 @@ export const BlockQuote = ({ quote, author, authorTitle, image, imageAlt, gradYe
                         alt={imageAlt || ''}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1000px) 80vw, (max-width: 1280px) 70vw, 50vw"
-                        quality={85}
+                        quality={quality}
                         loading='lazy'
                         className='object-cover object-center'
                     />

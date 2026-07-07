@@ -8,8 +8,9 @@ interface BlockquoteData {
         src: string;
     };
     imageAlt?: string;
+    quality?: number;
     className?: string;
     figureClassName?: string;
 }
-export declare const BlockQuote: ({ quote, author, authorTitle, image, imageAlt, gradYear, className, figureClassName }: BlockquoteData) => React.JSX.Element;
+export declare const BlockQuote: ({ quote, author, authorTitle, image, imageAlt, gradYear, quality, className, figureClassName }: BlockquoteData) => React.JSX.Element;
 export {};

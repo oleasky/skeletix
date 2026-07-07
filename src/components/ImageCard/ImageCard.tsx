@@ -8,13 +8,14 @@ interface ImageCardProps{
     altText: string,
     title?: string,
     content?: string,
+    quality?: number,
     children?: React.ReactNode
     className?: string
 }
 
 const compId = 'image-card'
 
-export const ImageCard = ({image, altText, title, content, children, className=''}:ImageCardProps) => {
+export const ImageCard = ({image, altText, title, content, quality = 85, children, className=''}:ImageCardProps) => {
   return (
     <Container htmlTag="article" className={`md:flex-row bg-[#f1f5f9] ${compId} ${className}`} layout='row'>
         {image && (
@@ -24,6 +25,7 @@ export const ImageCard = ({image, altText, title, content, children, className='
             alt={altText}
             width={800}
             height={800}
+            quality={quality}
             />
           </figure>
         )}

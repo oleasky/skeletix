@@ -12,9 +12,10 @@ interface FooterProps {
         logoFooter: string;
         logoAlt: string;
     };
+    quality?: number;
     helpContent?: React.ReactNode;
     privacyContent?: React.ReactNode;
     className?: string;
 }
-export declare const PageFooter: ({ name, phone, address, branding, helpContent, privacyContent, className }: FooterProps) => React.JSX.Element;
+export declare const PageFooter: ({ name, phone, address, branding, quality, helpContent, privacyContent, className }: FooterProps) => React.JSX.Element;
 export {};

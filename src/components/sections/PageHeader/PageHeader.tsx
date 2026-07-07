@@ -9,11 +9,12 @@ interface HeaderProps {
     children?: React.ReactNode;
     logoWidth?: string;
     logoHeight?: string;
+    quality?: number;
 }
 
 const compId = 'page-header'
 
-export const PageHeader = ({ className, logoUrl, logoAlt, children, logoHeight, logoWidth } : HeaderProps) => {
+export const PageHeader = ({ className, logoUrl, logoAlt, children, logoHeight, logoWidth, quality = 85 } : HeaderProps) => {
     
     let logoWidthSize = 'w-fluid-3xl'
     let logoHeightSize = 'h-fluid-lg'
@@ -46,6 +47,7 @@ export const PageHeader = ({ className, logoUrl, logoAlt, children, logoHeight, 
                             alt={logoAlt || 'Logo Header'}
                             fill
                             priority
+                            quality={quality}
                         />
                     </figure>
                 }

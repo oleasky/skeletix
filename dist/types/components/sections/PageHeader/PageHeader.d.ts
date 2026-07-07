@@ -6,6 +6,7 @@ interface HeaderProps {
     children?: React.ReactNode;
     logoWidth?: string;
     logoHeight?: string;
+    quality?: number;
 }
-export declare const PageHeader: ({ className, logoUrl, logoAlt, children, logoHeight, logoWidth }: HeaderProps) => React.JSX.Element;
+export declare const PageHeader: ({ className, logoUrl, logoAlt, children, logoHeight, logoWidth, quality }: HeaderProps) => React.JSX.Element;
 export {};

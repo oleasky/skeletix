@@ -16,6 +16,7 @@ interface FooterProps {
         logoFooter: string;
         logoAlt: string;
     };
+    quality?: number;
     helpContent?: React.ReactNode;
     privacyContent?: React.ReactNode;
     className?: string;
@@ -24,11 +25,12 @@ interface FooterProps {
 const compId = 'page-footer';
 
 export const PageFooter = ({
-    name, 
-    phone, 
+    name,
+    phone,
     address,
-    branding, 
-    helpContent, 
+    branding,
+    quality = 85,
+    helpContent,
     privacyContent,
     className = ''
 }:FooterProps) => {
@@ -51,6 +53,7 @@ export const PageFooter = ({
                                     src={branding?.logoFooter}
                                     alt={branding?.logoAlt}
                                     fill
+                                    quality={quality}
                                 />
                             </figure>
                         }

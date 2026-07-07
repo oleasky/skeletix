@@ -5,8 +5,9 @@ interface ImageCardProps {
     altText: string;
     title?: string;
     content?: string;
+    quality?: number;
     children?: React.ReactNode;
     className?: string;
 }
-export declare const ImageCard: ({ image, altText, title, content, children, className }: ImageCardProps) => React.JSX.Element;
+export declare const ImageCard: ({ image, altText, title, content, quality, children, className }: ImageCardProps) => React.JSX.Element;
 export {};
